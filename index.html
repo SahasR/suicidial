@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Suicidial</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a class="logo"><strong>Suicidial</strong></a>
+									<header class="main">
+										<div class="container">  
+										  <input class="search-input" type="text" placeholder="Type your country here."/>
+										  <div class="suggestions">
+										  </div>
+										</div>
+									</header>
+								</header>
+		
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Hi, we're Suicidial</h1>
+											<p>A Global Suicide Hotline Index</p>
+										</header>
+										<p>Suicidial.org is a global Suicide Prevention Hotline Index which was created under a concept by Rivindu Perera in November 2020. 
+										</p>
+										<p>
+										Our key focus is on connecting all Suicide Prevention Hotlines in one Website in order to create quick response to any person with effects relating to suicide, without wasting time searching for various others. 
+										</p>
+										<p>
+										We expect to completely broaden our coverage of Hotlines to 50 nations worldwide by 2025.
+										</p>
+										<p>Find more about us from <a href="about-us.html">here</a> or from the menu when you click on the three lines on the top left.</p>
+									</div>
+									<span class="image object">
+										<img src="images/pic10.png"/>
+									</span>
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="about-us.html">About Us</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>We're always looking to expand our database to help more people worldwide. Get in touch with us so we can help a lot more people.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+										<li class="icon solid fa-phone">(000) 000-0000</li>
+										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+										Nashville, TN 00000-0000</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Suicidial. All rights reserved.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+				const countries = [
+					  {name: 'Sri Lanka', ref: '<a class= "popup-sug" href="countries/srilanka.html"> Sri Lanka </a>'}
+					];
+
+					const searchInput = document.querySelector('.search-input');
+					const suggestionsPanel = document.querySelector('.suggestions');
+
+					searchInput.addEventListener('keyup', function() {
+					  const input = searchInput.value.toLowerCase();
+					  suggestionsPanel.innerHTML = '';
+					  const suggestions = countries.filter(function(country) {
+					    return country.name.toLowerCase().startsWith(input);
+					  });
+					  suggestions.forEach(function(suggested) {
+					    const div = document.createElement('div');
+					    div.innerHTML = suggested.ref;
+					    div.style.color = "black";
+					    suggestionsPanel.appendChild(div);
+					  });
+					  if (input === '') {
+					    suggestionsPanel.innerHTML = '';  
+					  }
+					})
+			</script>
+	</body>
+</html>
